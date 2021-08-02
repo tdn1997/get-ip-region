@@ -13,6 +13,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "geoip-lite": "^1.4.2",
-    "ipaddr.js": "^2.0.1"
+    "ipaddr.js": "^2.0.1",
+    "public-ip": "^4.0.4"
   }
 }
