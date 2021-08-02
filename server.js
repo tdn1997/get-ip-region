@@ -8,13 +8,14 @@ const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
   const ipv4 = ipaddr.process(req.ip).toString();
+  const remoteAddress = req.connection.remoteAddress;
 
   // const geo1 = geoip.lookup("207.97.227.239");
   // const geo2 = geoip.lookup("10.71.221.241");
 
   const geo = geoip.lookup(ipv4);
 
-  res.send(JSON.stringify({ ipv4, geo }));
+  res.send(JSON.stringify({ ipv4, remoteAddress, geo }));
 });
 
 app.listen(port, () => {
