@@ -1,1 +1,1 @@
-web: node server.js
+web: cd node_modules/geoip-lite && npm run-script updatedb license_key=mZZawl51rtgwfZKt && cd ../.. && node server.js
